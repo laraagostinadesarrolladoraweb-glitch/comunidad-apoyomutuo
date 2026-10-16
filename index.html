@@ -16,15 +16,6 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        pastel: {
-                            rose: '#fff1f2',
-                            pink: '#fce7f3',
-                            purple: '#f3e8ff',
-                            blue: '#e0f2fe',
-                            cream: '#fdfbf7',
-                        }
                     }
                 }
             }
@@ -38,12 +29,20 @@
         .instagram-gradient {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
+        .instagram-text-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .instagram-bg-light {
+            background: rgba(220, 39, 67, 0.08);
+        }
         .card-hover {
             transition: all 0.3s ease;
         }
         .card-hover:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 25px -5px rgba(220, 39, 67, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
@@ -51,7 +50,7 @@
 
     <header class="w-full py-10 px-4 text-center">
         <div class="max-w-xl mx-auto">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-100 text-pink-600 mb-4 shadow-sm">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl instagram-gradient text-white mb-4 shadow-md">
                 <i class="fa-solid fa-users text-2xl"></i>
             </div>
             <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 mb-2">
@@ -68,14 +67,14 @@
 
             <!-- Card 1: Seguimiento y Post Obligatorio -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-rose-50 rounded-bl-full -z-0 opacity-60"></div>
+                <div class="absolute top-0 right-0 w-24 h-24 instagram-bg-light rounded-bl-full -z-0 opacity-60"></div>
                 <div class="relative z-10">
                     <div class="flex items-center space-x-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-rotate"></i>
+                        <div class="w-10 h-10 rounded-xl instagram-bg-light flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-rotate instagram-text-gradient text-lg"></i>
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-rose-50 text-rose-600 mb-1">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold instagram-bg-light instagram-text-gradient mb-1">
                                 Para Chicas
                             </span>
                             <h2 class="text-lg font-bold text-slate-800 leading-snug">
@@ -84,7 +83,7 @@
                         </div>
                     </div>
                     <p class="text-slate-500 text-sm mb-5 leading-relaxed">
-                      Un espacio para conectar, acompañarnos y compartir nuestro contenido entre todas.
+                        Un espacio para conectar, acompañarnos y compartir nuestro contenido entre todas.
                     </p>
                     <a href="https://ig.me/j/AbbdXkQQLgPjkuDv/" target="_blank" rel="noopener noreferrer" 
                        class="w-full flex items-center justify-center space-x-2 instagram-gradient text-white font-medium py-3 px-4 rounded-xl shadow-md hover:opacity-95 transition-all text-sm">
@@ -94,17 +93,17 @@
                 </div>
             </div>
 
-            <!-- Card 2: Solo Likes sin seguimiento obligatorio -->
+            <!-- Card 2: Solo Likes (Chicas) -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-pink-50 rounded-bl-full -z-0 opacity-60"></div>
+                <div class="absolute top-0 right-0 w-24 h-24 instagram-bg-light rounded-bl-full -z-0 opacity-60"></div>
                 <div class="relative z-10">
                     <div class="flex items-center space-x-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-venus"></i>
+                        <div class="w-10 h-10 rounded-xl instagram-bg-light flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-venus instagram-text-gradient text-lg"></i>
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-pink-50 text-pink-600 mb-1">
-                                
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold instagram-bg-light instagram-text-gradient mb-1">
+                                Solo Likes
                             </span>
                             <h2 class="text-lg font-bold text-slate-800 leading-snug">
                                 Solo Likes sin seguimiento obligatorio
@@ -115,24 +114,24 @@
                         Espacio pensado para chicas. Interactúa dando me gusta en las publicaciones del grupo, sin obligación de seguir cuentas.
                     </p>
                     <a href="https://ig.me/j/KgQ4-VJVEuLQDZ9S/" target="_blank" rel="noopener noreferrer" 
-                       class="w-full flex items-center justify-center space-x-2 bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-4 rounded-xl shadow-sm transition-all text-sm">
+                       class="w-full flex items-center justify-center space-x-2 instagram-gradient text-white font-medium py-3 px-4 rounded-xl shadow-md hover:opacity-95 transition-all text-sm">
                         <i class="fa-brands fa-instagram text-lg"></i>
                         <span>Unirse al Grupo (Chicas)</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Card 3: Solo Likes sin seguimiento obligatorio -->
+            <!-- Card 3: Solo Likes (Chicos) -->
             <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -z-0 opacity-60"></div>
+                <div class="absolute top-0 right-0 w-24 h-24 instagram-bg-light rounded-bl-full -z-0 opacity-60"></div>
                 <div class="relative z-10">
                     <div class="flex items-center space-x-3 mb-3">
-                        <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-mars"></i>
+                        <div class="w-10 h-10 rounded-xl instagram-bg-light flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-mars instagram-text-gradient text-lg"></i>
                         </div>
                         <div>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-1">
-                                
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold instagram-bg-light instagram-text-gradient mb-1">
+                                Solo Likes
                             </span>
                             <h2 class="text-lg font-bold text-slate-800 leading-snug">
                                 Solo Likes sin seguimiento obligatorio
@@ -143,9 +142,65 @@
                         Espacio pensado para chicos. Apoya las publicaciones mediante me gusta de forma rápida y práctica, sin obligación de seguir cuentas.
                     </p>
                     <a href="https://ig.me/j/on16BTDf_2JuvvUj/" target="_blank" rel="noopener noreferrer" 
-                       class="w-full flex items-center justify-center space-x-2 bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded-xl shadow-sm transition-all text-sm">
+                       class="w-full flex items-center justify-center space-x-2 instagram-gradient text-white font-medium py-3 px-4 rounded-xl shadow-md hover:opacity-95 transition-all text-sm">
                         <i class="fa-brands fa-instagram text-lg"></i>
                         <span>Unirse al Grupo (Chicos)</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Grupo Mixto -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 instagram-bg-light rounded-bl-full -z-0 opacity-60"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl instagram-bg-light flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-venus-mars instagram-text-gradient text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold instagram-bg-light instagram-text-gradient mb-1">
+                                Comunidad
+                            </span>
+                            <h2 class="text-lg font-bold text-slate-800 leading-snug">
+                                Grupo Mixto
+                            </h2>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">
+                        Un espacio para apoyarnos mutuamente.
+                    </p>
+                    <a href="https://ig.me/j/VBS8RyQLHDsDoqAo/" target="_blank" rel="noopener noreferrer" 
+                       class="w-full flex items-center justify-center space-x-2 instagram-gradient text-white font-medium py-3 px-4 rounded-xl shadow-md hover:opacity-95 transition-all text-sm">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>Unirse al Grupo Mixto</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5: Chat Social -->
+            <div class="bg-white rounded-3xl p-6 shadow-sm border border-slate-100 card-hover relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 instagram-bg-light rounded-bl-full -z-0 opacity-60"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl instagram-bg-light flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-comments instagram-text-gradient text-lg"></i>
+                        </div>
+                        <div>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold instagram-bg-light instagram-text-gradient mb-1">
+                                Conversación
+                            </span>
+                            <h2 class="text-lg font-bold text-slate-800 leading-snug">
+                                Chat Social
+                            </h2>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-5 leading-relaxed">
+                        Un lugar distendido para conversar, hacer amigos, compartir experiencias y pasar un buen rato con la comunidad.
+                    </p>
+                    <a href="https://ig.me/j/qA5PVkKFpjSkBM-c/" target="_blank" rel="noopener noreferrer" 
+                       class="w-full flex items-center justify-center space-x-2 instagram-gradient text-white font-medium py-3 px-4 rounded-xl shadow-md hover:opacity-95 transition-all text-sm">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                        <span>Unirse al Chat Social</span>
                     </a>
                 </div>
             </div>
